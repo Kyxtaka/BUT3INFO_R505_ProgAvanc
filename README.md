@@ -47,11 +47,14 @@ python manage.py migrate
 note : examine le réglage **INSTALLED_APPS** et crée les tables de base de données nécessaires en
 fonction des réglages de base de données dans votre fichier **TutoDjango/settings.py**
 
-### Feuille 5 - Création d'un application 
+### Feuille 5 et 6 - Création d'un application 
 
 Création d'une app dans un projet Django commande : `startapp`
 
 ```bash
 ./manage.py startapp monApp
 ```
+ajout de `monApp` dans la variable **INSTALLED_APPS** de *settings.py*
+
+### Feuille 7 - ajout d'une Première Page
 
