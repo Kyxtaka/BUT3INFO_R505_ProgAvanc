@@ -2,7 +2,7 @@
 Repository où il y aura tout mes exercises pour le module R5.05 du BUT 3 Informatique IUT Orléans
 
 ## TD/TP 1 Mise en bouche - Initialisation au framework Django
-### Installation du framwork
+### Feuille 1 - Installation du framwork
 Pour commencer tout projet en Django il faut d'abord creer la projet à la racine. 
 Voici les différentes commandes à executer pour commencer
 
@@ -19,7 +19,7 @@ Une fois l'installation fait et vérifié on sauvegarde une trace des packages i
 pip freeze > requirements.txt
 ```
 
-### Création d'un projet Django
+### Feuille 2 - Création d'un projet Django
 
 Pour créer un projet django voici la commande à réaliser ```django-admin startproject <nom repertoire projet>```
 Pour moi ce cera TutoDjango
@@ -36,3 +36,13 @@ python manage.py runserver
 ```
 Une fois le serveur lancer il est accéssible en local [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
+### Feuille 4 - Découverte des applications
+
+variable INSTALLED_APPS dans `./TutoDjango/settings.py`
+
+pour les rendre fonctionnelle ==> faire la migration 
+```bash
+python manage.py migrate
+```
+note : examine le réglage **INSTALLED_APPS** et crée les tables de base de données nécessaires en
+fonction des réglages de base de données dans votre fichier **TutoDjango/settings.py**
