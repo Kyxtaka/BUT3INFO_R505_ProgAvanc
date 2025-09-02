@@ -27,3 +27,12 @@ Pour moi ce cera TutoDjango
 ```bash
 django-admin startproject TutoDjango
 ```
+
+Une fois le projet créer, se placer dans le répertoire du projet et lancer le serveur pour la première fois
+
+```bash
+cd TutoDjango
+python manage.py runserver
+```
+Une fois le serveur lancer il est accéssible en local [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+
