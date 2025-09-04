@@ -78,3 +78,10 @@ urlpatterns = [
     - ajout de `path("monApp/", include("monApp.urls")),` dans TutoDjango/urls.py
 
 
+### Feuille 9 : creation d'une route et vue avec paramètre
+- création d'une vue dynamique avec un paramètre
+`path('home/<param>',views.home ,name='home'),` et  
+```py
+def home(request, param):
+    return HttpResponse(f"<h1>Bonjour { param }!</h1>") 
+```
