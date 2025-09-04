@@ -58,3 +58,23 @@ ajout de `monApp` dans la variable **INSTALLED_APPS** de *settings.py*
 
 ### Feuille 7 - ajout d'une Première Page
 
+- Ajout de la première vue dans monApp/views
+```py
+from django.http import HttpResponse
+def home(request):
+    return HttpResponse("<h1>Hello Django!</h1>")
+```
+- Ajout d'une configuration url `urls.py` dans monApp/urls.py 
+```py
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path("", views.home, name="home"),
+]
+```
+- importation de urls conf de monApp dand urls.py de TudoDjango
+    - ajout de include dans `from django.urls import` dans TutoDjango/urls.py
+    - ajout de `path("monApp/", include("monApp.urls")),` dans TutoDjango/urls.py
+
+
