@@ -62,7 +62,7 @@ ajout de `monApp` dans la variable **INSTALLED_APPS** de *settings.py*
 ```py
 from django.http import HttpResponse
 def home(request):
-    return HttpResponse("<h1>Hello Django!</h1>")
+    return HttpRe./manage.py sqlmigrate monApp 0001sponse("<h1>Hello Django!</h1>")
 ```
 - Ajout d'une configuration url `urls.py` dans monApp/urls.py 
 ```py
@@ -85,3 +85,19 @@ urlpatterns = [
 def home(request, param):
     return HttpResponse(f"<h1>Bonjour { param }!</h1>") 
 ```
+
+## TP 1 : Django ORM
+### Migration 
+- création d'un model dans ./monApp/models.py
+    - classe Produit
+    - classe Categorie
+
+Commande pour effectuer la migration
+```bash
+./manage.py makemigrations monApp
+./manage.py sqlmigrate monApp 0001 #affiche les commandes sql effectué par la migration
+./manage.py check #Verification si pas d'issues
+./manage.py migrate # créationd des table de model -> toute migration des toutes la apps
+```
+
+
